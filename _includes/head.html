@@ -1,0 +1,88 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.url != "/" and page.title != "" %}{{ page.title | escape }} {{ site.title_separator }} {{ site.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+<meta content="{{ site.title }}" name="copyright">
+
+<!-- Search engines -->
+{% if page.seo_index == true %}
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+{% else %}
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "http://www.example.com",
+    "name": "Unlimited Ball Bearings Corp.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+32-254-556-896",
+      "contactType": "Customer service"
+    }
+  }
+</script>
+
+{% seo %}
+
+{% if page.theme_color %}
+  <meta name="theme-color" content="{{ page.theme_color }}">
+  <meta name="msapplication-navbutton-color" content="{{ page.theme_color }}">
+{% else %}
+  <meta name="theme-color" content="{{ site.theme_color }}">
+  <meta name="msapplication-navbutton-color" content="{{ site.theme_color }}">
+{% endif %}
+
+<!-- <link rel="icon" type="image/x-icon" href="{{ '/assets/images/icons/favicon.ico' | relative_url }}"> -->
+<!-- <link rel="apple-touch-icon" href="{{ '/assets/images/icons/white/icon-96x96.png' | relative_url }}"> -->
+<!-- <link rel="manifest" href="/manifest.json"/> -->
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://use.fontawesome.com">
+<link rel="preconnect" href="https://s3.amazonaws.com">
+
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://use.fontawesome.com">
+<link rel="dns-prefetch" href="https://s3.amazonaws.com">
+
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://use.fontawesome.com">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' }}">
+
+<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+<!-- <script src="https://s3.amazonaws.com/cdn.io/datas/lib/jdb/js/1.24.1/jdb.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/3.4.1/tippy.all.min.js"></script>
+<script type="text/javascript">
+  jdb.tooltip = tippy;
+  jdb.tooltip.setDefaults({
+    theme: "light-border",
+    arrowType: "round",
+    animation: 'fade',
+    arrow: true
+  });
+</script>
+
+{% if jekyll.environment == "production" %}
+  {% if site.analytics.google.tracking_id %}
+    <script type="text/javascript">
+      if (!(navigator.doNotTrack && navigator.doNotTrack == "1" ||
+            window.doNotTrack && window.doNotTrack == "1")) {
+        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+        ga("create", "{{ site.analytics.google.tracking_id }}", "auto");
+        ga("send", "pageview");
+      }
+    </script>
+  {% endif %}
+{% endif %}

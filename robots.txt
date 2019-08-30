@@ -1,0 +1,25 @@
+---
+layout: null
+regenerate: true
+disallows:
+  - /*
+  - /404.html
+  - /assets/*
+  - /readme.md
+  - /uses*
+  - /p/*
+  - /*.js
+  - /*.json
+  - /*.css
+allows:
+  - /$
+  - /assets/images/*
+---
+
+User-agent: *
+{% for allowed in page.allows -%}
+Allow: {{ allowed }}
+{% endfor -%}
+
+Sitemap: {{ "sitemap.xml" | absolute_url }}
+Host: {{ site.url | split: "/" | last }}

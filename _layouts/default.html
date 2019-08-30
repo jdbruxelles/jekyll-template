@@ -1,0 +1,22 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  {% include head.html %}
+</head>
+<body class="{{ page.layout }}{% if page.thumbnail %} thumbnail-as-bg{% endif %}"">
+  <div id="wrapper">
+    <div class="container {{ page.title | downcase | slugify }}">
+      {% include header.html %}
+      <main>
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

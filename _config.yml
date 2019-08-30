@@ -1,0 +1,116 @@
+# Where things are
+source              : .
+destination         : ./_site
+testimonials_dir    : ./_testimonials
+layouts_dir         : _layouts
+# data_dir            : _data
+includes_dir        : _includes
+sass_dir            : _assets/scss
+
+lang        : # fr-BE
+encoding    : utf-8
+title_separator: "|"
+logo:
+
+name        : 
+title       : 
+short_name  : 
+description : 
+url         : 
+
+author:
+  name: 
+  url : 
+  avatar: 
+
+# Site/SEO settings
+email            : 
+default_img      : 
+theme_color      : "#ffffff"
+
+github:
+  repository_url: https://github.com/user-name/projet-name
+  zip_url       : https://github.com/user-name/projet-name/archive/master.zip
+social:
+  twitter  : https://twitter.com/id
+  facebook : https://facebook.com/id
+  instagram: https://instagram.com/id
+  # snapchat : https://www.snapchat.com/add/id
+  # youtube  : https://www.youtube.com/c/id
+  # codepen  : https://codepen.com/id
+  # dev      : https://dev.to/id
+
+# SEO plugin
+twitter:
+  username :
+  card     : summary
+facebook:
+  app_id   : 
+  publisher: 
+  admins   : 
+social:
+  name: Joe
+  links:
+    - https://twitter.com/id
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/id
+    - https://plus.google.com/+id
+    - https://github.com/id
+    - https://keybase.io/id
+webmaster_verifications:
+  google: 
+  bing  : 
+  alexa : 
+  yandex: 
+  baidu : 
+
+# Add GA Id to enable Google Analytics tracking code in production builds
+analytics:
+  google:
+    tracking_id: 
+    anonymize_ip: true
+    site_verification:
+
+# Build settings
+include             : [".htaccess"]
+exclude             : ["README.md", "gulpfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+keep_files          : [".git", ".svn"]
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+markdown            : kramdown
+regenerate          : true
+incremental         : true
+plugins:
+  - jekyll-watch
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: _assets/scss
+  style: compressed # possible values: nested expanded compact compressed
+  deploy_style: compressed # for build
+  compile_in_place: true
+
+assets:
+  prefix: "/assets"
+  sources:
+    - _assets/scss
+    # - _assets/js
+    # - _assets/images
+  compress:
+    css : sass
+    js  : uglifier
+  features:
+    automatic_img_alt  : true
+    automatic_img_size : false
+
+compress_html:
+  clippings : all
+  comments  : all
+  startings : [html, head, body]
+
+# Collections
+collections:
+  testimonials:
+    output: false
+  projects: 
+    output: true
+    permalink: "/projects/:path"
