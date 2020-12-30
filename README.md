@@ -4,13 +4,13 @@
 - [Use directly in a new repository](https://github.com/rboot-dev/jekyll-template/generate)
 - [Download the zip](https://github.com/rboot-dev/jekyll-template/archive/main.zip)
 - Clone using [Git](https://git-scm.com/):
-  ````
+  ```
   $ git clone https://github.com/rboot-dev/jekyll-template.git
-  ````
+  ```
 - Clone using [GitHub CLI](https://cli.github.com/):
-  ````
+  ```
   $ gh repo clone rboot-dev/jekyll-template
-  ````
+  ```
 
 ## Run locally
 
