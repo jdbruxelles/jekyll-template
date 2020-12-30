@@ -11,7 +11,7 @@
   ````
   $ gh repo clone rboot-dev/jekyll-template
   ````
-https://github.com/rboot-dev/jekyll-template/generate
+
 ## Run locally
 
 If you have a full Jekyll environment installed, you can skip to the step 3:
