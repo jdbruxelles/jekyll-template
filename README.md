@@ -1,13 +1,20 @@
 # Jekyll basic template
 
 ## Installation
-- [Use directly in a new repository](/generate)
-- [Clone using GitHub Desktop](x-github-client://openRepo/https://github.com/rboot-dev/jekyll-template)
-- [Download the zip](/archive/main.zip)
-
+- [Use directly in a new repository](https://github.com/rboot-dev/jekyll-template/generate)
+- [Download the zip](https://github.com/rboot-dev/jekyll-template/archive/main.zip)
+- Clone using [Git](https://git-scm.com/):
+  ````
+  $ git clone https://github.com/rboot-dev/jekyll-template.git
+  ````
+- Clone using [GitHub CLI](https://cli.github.com/):
+  ````
+  $ gh repo clone rboot-dev/jekyll-template
+  ````
+https://github.com/rboot-dev/jekyll-template/generate
 ## Run locally
 
-If you don't have a full Jekyll environment installed, please follow these steps:
+If you have a full Jekyll environment installed, you can skip to the step 3:
 
 1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
 
@@ -17,13 +24,15 @@ If you don't have a full Jekyll environment installed, please follow these steps
 gem install jekyll bundler
 ```
 
-3. Install dependencies from Gemfile:
+3. Install dependencies from Gemfile
 
 ```
 bundle install
 ```
 
-4. Build the site and make it available on a local server
+4. Replace the sample data with your data in the `_config.yml` file.
+
+5. Build the site and make it available on a local server
 
 ```
 bundle exec jekyll serve
