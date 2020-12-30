@@ -1,7 +1,11 @@
 # Jekyll basic template
 
-
 ## Installation
+- [Use directly in a new repository](/generate)
+- [Clone using GitHub Desktop](x-github-client://openRepo/https://github.com/rboot-dev/jekyll-template)
+- [Download the zip](/archive/main.zip)
+
+## Run locally
 
 If you don't have a full Jekyll environment installed, please follow these steps:
 
@@ -40,4 +44,5 @@ Configuration file: /PROJECT_NAME/_config.yml
 
 5. Now browse to [http://localhost:4000](http://localhost:4000).
 
+## More about Jekyll
 See the [Jekyll documentation](https://jekyllrb.com/docs/) for more.
