@@ -8,16 +8,18 @@ includes_dir        : _includes
 sass_dir            : _assets/scss
 
 lang        : # fr-BE
+locale      : # fr-BE # SEO tag
 encoding    : utf-8
 title_separator: "|"
-logo:
+logo:  # SEO tag
 
 name        : 
-title       : 
+title       :  # SEO tag
 short_name  : 
-description : 
-url         : 
+description :  # SEO tag
+url         :  # SEO tag
 
+# SEO tag
 author:
   name: 
   url : 
@@ -31,6 +33,7 @@ theme_color      : "#ffffff"
 github:
   repository_url: https://github.com/user-name/projet-name
   zip_url       : https://github.com/user-name/projet-name/archive/master.zip
+
 social:
   twitter  : https://twitter.com/id
   facebook : https://facebook.com/id
@@ -64,16 +67,18 @@ webmaster_verifications:
   yandex: 
   baidu : 
 
+ # SEO tag
+google_site_verification:
+
 # Add GA Id to enable Google Analytics tracking code in production builds
 analytics:
   google:
     tracking_id: 
     anonymize_ip: true
-    site_verification:
 
 # Build settings
 include             : [".htaccess"]
-exclude             : ["README.md", "gulpfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude             : ["README.md", ".gitignore", "gulpfile.js", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files          : [".git", ".svn"]
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
 markdown            : kramdown
@@ -114,3 +119,4 @@ collections:
   projects: 
     output: true
     permalink: "/projects/:path"
+    
