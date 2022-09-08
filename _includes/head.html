@@ -55,19 +55,6 @@
 
 <link rel="canonical" href="{{ page.url | replace: 'index.html', '' }}">
 
-<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-<!-- <script src="https://s3.amazonaws.com/cdn.io/datas/lib/jdb/js/1.24.1/jdb.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/3.4.1/tippy.all.min.js"></script>
-<script type="text/javascript">
-  jdb.tooltip = tippy;
-  jdb.tooltip.setDefaults({
-    theme: "light-border",
-    arrowType: "round",
-    animation: 'fade',
-    arrow: true
-  });
-</script>
-
 {% if jekyll.environment == "production" %}
   {% if site.analytics.google.tracking_id %}
     <script type="text/javascript">
